@@ -6,7 +6,7 @@
 
 :root {
   /* background */
-  --background-color: #121212;
+  --background-color: #1e1d1d;
 
   /* Colors */
   --oxford-blue: #0b2545;
@@ -20,6 +20,8 @@
   --Blue3: #c9cfdf;
   --Blue4: #e9edf8;
 
+  --red: rgb(218, 50, 50);
+
   /*Eternal constance */
   --gradient1: #09203f;
   --gradient2: #537895;
@@ -31,6 +33,10 @@
 
 body {
   background-color: var(--background-color);
+}
+
+img {
+  max-width: 500px;
 }
 
 a {
@@ -47,6 +53,7 @@ li {
   justify-content: space-between;
   padding: 20px;
   color: #fff;
+  background-color: var(--red);
 }
 
 .nav-links a {
@@ -139,14 +146,15 @@ input[type="checkbox"] {
 
 .glass {
   background: rgba(255, 255, 255, 0.27);
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.9px);
   -webkit-backdrop-filter: blur(3.9px);
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 0.847);
   padding: 10px;
   width: 80%;
   margin: auto;
+  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
