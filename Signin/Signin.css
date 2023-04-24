@@ -4,6 +4,9 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+body {
+  background-color: black;
+}
 
 .login-box {
   position: absolute;
@@ -12,7 +15,7 @@
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-   background: linear-gradient(#141e30, #243b55);
+  background: linear-gradient(#141e30, #243b55);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -22,7 +25,7 @@
   width: 50%;
   margin: auto;
   display: flex;
- margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .login-box h2 {
