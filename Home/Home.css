@@ -6,7 +6,7 @@
 
 :root {
   /* background */
-  --background-color: #1e1d1d;
+  --background-color: #1a1919;
 
   /* Colors */
   --oxford-blue: #0b2545;
@@ -20,7 +20,7 @@
   --Blue3: #c9cfdf;
   --Blue4: #e9edf8;
 
-  --red: rgb(218, 50, 50);
+  --red: #e42535;
 
   /*Eternal constance */
   --gradient1: #09203f;
@@ -35,12 +35,20 @@ body {
   background-color: var(--background-color);
 }
 
+.glass-box .icon {
+  display: flex;
+  max-width: 20vw;
+  max-height: 20vh;
+  margin: 40px 0 0 40px;
+}
+
 .box {
   display: flex;
   justify-content: flex-end;
 }
+
 .sofa {
-  max-width: 40%;
+  max-width: 50%;
 }
 
 a {
@@ -144,7 +152,7 @@ input[type="checkbox"] {
   border-radius: 20px;
   padding: 10px 20px;
   border: 1px solid white;
-  background-color: var(--background-color);
+  background-color: var(--red);
   color: white;
 }
 
@@ -160,6 +168,42 @@ input[type="checkbox"] {
   margin: auto;
   margin-top: 2rem;
 }
+
+/* Animations */
+.icon {
+  animation: jump 1s infinite alternate;
+}
+
+
+@keyframes mover {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+/* .zoom {
+  height: 100vh;
+  width: 100vw;
+}
+
+.zoom img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
 
 @media (max-width: 768px) {
   .navbar--menu {
