@@ -136,7 +136,6 @@ input[type="checkbox"] {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-top: 3rem;
 }
 
 .carousel__inner {
