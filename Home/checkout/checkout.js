@@ -117,3 +117,56 @@ updateSelectedCount();
 //     totalDisplay.textContent = total.toFixed(2);
 //   }
 // }
+const dateInput = document.getElementById("date-input");
+const timeInput = document.getElementById("time-input");
+const submitButton = document.getElementById("submit-btn");
+const ticketPreview = document.getElementById("ticket-preview");
+const ticketDate = document.getElementById("ticket-date");
+const ticketTime = document.getElementById("ticket-time");
+
+submitButton.addEventListener("click", event => {
+  event.preventDefault();
+  const date = dateInput.value;
+  const time = timeInput.value;
+  const currentDate = new Date();
+  const selectedDate = new Date(date);
+  if (selectedDate < currentDate) {
+    dateInput.setCustomValidity("Please select a valid date.");
+    return;
+  }
+  ticketDate.textContent = date;
+  ticketTime.textContent = time;
+  ticketPreview.style.display = "block";
+});
+
+// Disable times that are not 2pm, 4pm, 6pm, or 9pm
+timeInput.addEventListener("change", () => {
+  const selectedTime = timeInput.value;
+  const currentDate = new Date();
+  const selectedDate = new Date(dateInput.value);
+  const selectedDateTime = new Date(
+    `${selectedDate.toDateString()} ${selectedTime}`
+  );
+
+  if (selectedDateTime < currentDate) {
+    timeInput.setCustomValidity("Please select a valid time.");
+    return;
+  }
+
+  if (
+    selectedTime === "14:00" ||
+    selectedTime === "16:00" ||
+    selectedTime === "18:00" ||
+    selectedTime === "21:00"
+  ) {
+    timeInput.setCustomValidity("");
+  } else {
+    timeInput.setCustomValidity("Please select a valid time.");
+  }
+});
+
+// Reset custom validity on input change
+dateInput.addEventListener("input", () => {
+  dateInput.setCustomValidity("");
+  timeInput.setCustomValidity("");
+});
