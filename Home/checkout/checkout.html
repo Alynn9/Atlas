@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Atlas" content="cinema , movie , 3d " />
+    <meta name="Alynn Edward " content="cine" />
+    <meta
+      name="viewport"
+      content="width = device-width , initial-scale = 1.0"
+    />
+    <link rel="stylesheet" href="checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img
+        class="navbar--logo"
+        src="../../Assets/Atlas Logo White.svg"
+        alt="logo"
+      />
+      <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <div class="navbar--menu">
+          <li><a href="/">Home</a></li>
+
+          <li class="navbar--menu-movies">
+            <a href="/">Movies</a>
+            <ul class="dropdown">
+              <li><a href="/">Comming Soon </a></li>
+              <li><a href="/">New Arrivals</a></li>
+              <li><a href="/">3D</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/">Food Menu</a></li>
+
+          <li class="navbar--menu-movies">
+            <a href="/">Events</a>
+            <ul class="dropdown">
+              <li><a href="/">Special Events </a></li>
+              <li><a href="/">Little Date nights</a></li>
+              <li><a href="/">Sensory Friendly Shows</a></li>
+            </ul>
+          </li>
+
+          <div class="button">
+            <button class="button-signIn">Sign In</button>
+          </div>
+        </div>
+      </ul>
+    </nav>
+
+    <section class="movie-section">
+      <img
+        class="movie-section--carousel"
+        src="../../Assets/Carousal/EVDF.png"
+        alt="carousel"
+        style="background-color: aliceblue"
+      />
+      <div class="movie-section-box">
+        <img
+          class="movie-section--thumbnail"
+          src="../../Assets/MovieThumbnails/his only son.jpg"
+          alt="thumbnail"
+        />
+        <section class="flex">
+          <div class="container-box">
+            <p class="text">You have selected</p>
+            <span id="count">0</span>
+            <p>seats total$ :</p>
+            <span id="total">0</span>
+          </div>
+
+          <div class="container">
+            <div class="buttons checkout">
+              <button>CHAIR</button>
+              <button>CHAIR</button>
+              <button>CHAIR</button>
+            </div>
+            <div class="screen"></div>
+            <div class="screen--seats">
+              <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+              </div>
+              <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="movie-section-nav"></div>
+
+      <div class="movie-container">
+        <label>Pick a movie:</label>
+        <select id="movie">
+          <option value="10">Avengers: Endgame ($10)</option>
+          <!-- <option value="12">Joker ($12)</option>
+            <option value="8">Toy Story 4 ($8)</option>
+            <option value="9">The Lion King ($9)</option>  -->
+        </select>
+      </div>
+
+      <!-- <ul class="showcase">
+        <li>
+          <div class="seat"></div>
+          <small>N/A</small>
+        </li>
+        <li>
+          <div class="seat selected"></div>
+          <small>Selected</small>
+        </li>
+        <li>
+          <div class="seat occupied"></div>
+          <small>Occupied</small>
+        </li>
+      </ul> -->
+    </section>
+
+    <!-- Checkout 
+      <div class="checkout">
+      <h2>Checkout</h2>
+      <div class="checkout__summary">
+        <p>Date: <span id="checkout__date"></span></p>
+        <p>Time: <span id="checkout__time"></span></p>
+        <p>Price: $<span id="checkout__price"></span></p>
+        <p>VAT (11%): $<span id="checkout__vat"></span></p>
+        <p>Total: $<span id="checkout__total"></span></p>
+      </div>
+      <form class="checkout__form" action="#" method="POST">
+        <h3>Personal Information</h3>
+        <label for="checkout__name">Name:</label>
+        <input id="checkout__name" type="text" required />
+        <label for="checkout__email">Email:</label>
+        <input id="checkout__email" type="email" required />
+        <button class="checkout__submit">Submit</button>
+      </form>
+    </div> -->
+    <script src="checkout.js"></script>
+  </body>
+</html>

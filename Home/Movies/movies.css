@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* background */
+  --background-color: #1a1919;
+
+  /* Colors */
+  --oxford-blue: #0b2545;
+  --berkely-blue: #13315c;
+  --yale-blue: #134074;
+  --powder-blue: #8da9c4;
+  --mint-cream: #eef4ed;
+
+  --Blue1: #2b4f71;
+  --Blue2: #657a97;
+  --Blue3: #c9cfdf;
+  --Blue4: #e9edf8;
+
+  --red: #e42535;
+
+  /*Eternal constance */
+  --gradient1: #09203f;
+  --gradient2: #537895;
+
+  /*vicious stance */
+  --gradient3: #29323c;
+  --gradient4: #485563;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.main .venom {
+  width: 100%;
+}
