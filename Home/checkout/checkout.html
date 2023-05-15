@@ -16,44 +16,33 @@
   </head>
   <body>
     <nav class="navbar">
-      <img
-        class="navbar--logo"
-        src="../../Assets/Atlas Logo White.svg"
-        alt="logo"
-      />
-      <ul class="nav-links">
-        <input type="checkbox" id="checkbox_toggle" />
-        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-        <div class="navbar--menu">
-          <li><a href="/">Home</a></li>
-
-          <li class="navbar--menu-movies">
-            <a href="/">Movies</a>
-            <ul class="dropdown">
-              <li><a href="/">Coming Soon </a></li>
-              <li><a href="/">New Arrivals</a></li>
-              <li><a href="/">3D</a></li>
-            </ul>
-          </li>
-
-          <li><a href="/">Food Menu</a></li>
-
-          <li class="navbar--menu-movies">
-            <a href="/">Events</a>
-            <ul class="dropdown">
-              <li><a href="/">Special Events </a></li>
-              <li><a href="/">Little Date nights</a></li>
-              <li><a href="/">Sensory Friendly Shows</a></li>
-            </ul>
-          </li>
-
-          <li class="button">
-            <button class="button-signIn">Sign In</button>
-          </li>
-        </div>
+      <a href="#" class="navbar__logo">Logo</a>
+      <div class="navbar__toggle">
+        <span class="navbar__toggle-icon"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item navbar__item--active">
+          <a href="#" class="navbar__link">Home</a>
+          <ul class="navbar__sub-menu">
+            <li><a href="#" class="navbar__sub-link">Movies</a></li>
+            <li><a href="#" class="navbar__sub-link">Coming Soon</a></li>
+            <li><a href="#" class="navbar__sub-link">New Arrivals</a></li>
+            <li><a href="#" class="navbar__sub-link">3D Movies</a></li>
+          </ul>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Food Menu</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Special Events</a>
+          <ul class="navbar__sub-menu">
+            <li><a href="#" class="navbar__sub-link">Special Events</a></li>
+            <li><a href="#" class="navbar__sub-link">Little Date Nights</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-
+    
     <section class="movie-section">
       <img
         class="movie-section--carousel"
@@ -61,6 +50,7 @@
         alt="carousel"
         style="background-color: aliceblue"
       />
+
       <div class="movie-section-box">
         <img
           class="movie-section--thumbnail"
@@ -74,23 +64,9 @@
             <p>seats total$ :</p>
             <span id="total">0</span>
           </div>
-          <div style="position: absolute; width: 100%; height: 100%">
-            <button
-              onclick="Display()"
-              style="
-                padding: 20px;
-                border: 1px solid red;
-                background-color: #1a1919;
-                color: red;
-                cursor: pointer;
-              "
-            >
-              Next
-            </button>
-          </div>
-
+        
           <div class="container">
-            <div class="buttons_checkout">
+             <div class="buttons_checkout">
               <button onclick="showSection('section1')">
                 Choose Date and Time
               </button>
@@ -302,30 +278,30 @@
             </section>
 
             <section id="section3">
-              <h2 class="cinema-ticket__title"> Preview</h2>
+              <h2 class="cinema-ticket__title">Preview</h2>
               <div
-                  id="ticket-preview"
-                  class="cinema-ticket__ticket-preview"
-                  style="display: none"
-                >
-                  <h3 class="cinema-ticket__ticket-preview-title">
-                    Your ticket:
-                  </h3>
-                  <p class="cinema-ticket__ticket-preview-info">
-                    Date:
-                    <span
-                      id="ticket-date"
-                      class="cinema-ticket__ticket-preview-value"
-                    ></span>
-                  </p>
-                  <p class="cinema-ticket__ticket-preview-info">
-                    Time:
-                    <span
-                      id="ticket-time"
-                      class="cinema-ticket__ticket-preview-value"
-                    ></span>
-                  </p>
-                </div>
+                id="ticket-preview"
+                class="cinema-ticket__ticket-preview"
+                style="display: none"
+              >
+                <h3 class="cinema-ticket__ticket-preview-title">
+                  Your ticket:
+                </h3>
+                <p class="cinema-ticket__ticket-preview-info">
+                  Date:
+                  <span
+                    id="ticket-date"
+                    class="cinema-ticket__ticket-preview-value"
+                  ></span>
+                </p>
+                <p class="cinema-ticket__ticket-preview-info">
+                  Time:
+                  <span
+                    id="ticket-time"
+                    class="cinema-ticket__ticket-preview-value"
+                  ></span>
+                </p>
+              </div>
             </section>
           </div>
         </section>
@@ -338,7 +314,7 @@
         </select>
       </div>
 
-      <!-- <ul class="showcase">
+       <ul class="showcase">
         <li>
           <div class="seat"></div>
           <small>N/A</small>
@@ -351,28 +327,40 @@
           <div class="seat occupied"></div>
           <small>Occupied</small>
         </li>
-      </ul> -->
+      </ul>
     </section>
 
-    <!-- Checkout 
-      <div class="checkout">
-      <h2>Checkout</h2>
-      <div class="checkout__summary">
-        <p>Date: <span id="checkout__date"></span></p>
-        <p>Time: <span id="checkout__time"></span></p>
-        <p>Price: $<span id="checkout__price"></span></p>
-        <p>VAT (11%): $<span id="checkout__vat"></span></p>
-        <p>Total: $<span id="checkout__total"></span></p>
+    <div class="credit-card">
+      <div class="credit-card__logo">
+        <img src="https://via.placeholder.com/80x50" alt="Credit card logo" />
       </div>
-      <form class="checkout__form" action="#" method="POST">
-        <h3>Personal Information</h3>
-        <label for="checkout__name">Name:</label>
-        <input id="checkout__name" type="text" required />
-        <label for="checkout__email">Email:</label>
-        <input id="checkout__email" type="email" required />
-        <button class="checkout__submit">Submit</button>
-      </form>
-    </div> -->
+      <div class="credit-card__number">
+        <div class="credit-card__number-group">
+          <span class="credit-card__number-block">1234</span>
+          <span class="credit-card__number-block">5678</span>
+          <span class="credit-card__number-block">9012</span>
+          <span class="credit-card__number-block">3456</span>
+        </div>
+      </div>
+      <div class="credit-card__info">
+        <div class="credit-card__info-group">
+          <label for="card-holder-name" class="credit-card__label"
+            >Card holder name:</label
+          >
+          <span id="card-holder-name" class="credit-card__value">John Doe</span>
+        </div>
+        <div class="credit-card__info-group">
+          <label for="expiration-date" class="credit-card__label"
+            >Expiration date:</label
+          >
+          <span id="expiration-date" class="credit-card__value">12/24</span>
+        </div>
+        <div class="credit-card__info-group">
+          <label for="cvv" class="credit-card__label">CVV:</label>
+          <span id="cvv" class="credit-card__value">123</span>
+        </div>
+      </div>
+    </div> 
     <script src="checkout.js"></script>
   </body>
 </html>

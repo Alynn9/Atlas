@@ -9,53 +9,36 @@
       content="width = device-width , initial-scale = 1.0"
     />
     <link rel="stylesheet" href="Home.css" />
-    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="../navbar/navbar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
   </head>
   <body>
-    <nav class="navbar">
-      <img
-        class="navbar--logo"
-        src="../Assets/Atlas Logo White.svg"
-        alt="logo"
-      />
+    <nav class="nav">
+      <img src="../../Assets/Atlas Logo White.svg" class="logo" alt="logo" />
+      <i class="uil uil-bars navOpenBtn"></i>
       <ul class="nav-links">
-        <input type="checkbox" id="checkbox_toggle" />
-        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-        <div class="navbar--menu">
-          <li><a href="/">Home</a></li>
-
-          <li class="navbar--menu-movies">
-            <a href="/">Movies</a>
-            <ul class="dropdown">
-              <li><a href="/">Coming Soon </a></li>
-              <li><a href="/">New Arrivals</a></li>
-              <li><a href="/">3D</a></li>
-            </ul>
-          </li>
-
-          <li><a href="/">Food Menu</a></li>
-
-          <li class="navbar--menu-movies">
-            <a href="/">Events</a>
-            <ul class="dropdown">
-              <li><a href="/">Special Events </a></li>
-              <li><a href="/">Little Date nights</a></li>
-              <li><a href="/">Sensory Friendly Shows</a></li>
-            </ul>
-          </li>
-
-          <div class="button">
-            <button class="button-signIn">Sign In</button>
-          </div>
-        </div>
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="./Movies/movies.html">Movies</a></li>
+        <li><a href="#">Food Menu</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+      <div class="search-box">
+        <i class="uil uil-search search-icon"></i>
+        <input type="text" placeholder="Search here..." />
+      </div>
     </nav>
 
-    <div class="carousel">
+    <!-- <div class="carousel">
       <div class="carousel__inner">
         <div class="carousel__slide">
           <img src="../Assets/Carousal/His Only Son Final.png" />
@@ -79,17 +62,18 @@
       <button class="carousel__btn carousel__btn--prev">&#10094;</button>
       <button class="carousel__btn carousel__btn--next">&#10095;</button>
       <div class="carousel__indicators"></div>
-    </div>
+    </div> -->
+
     <!-- Glass -->
-    
-    <section class="glass">
+
+    <!-- <section class="glass">
       <div class="glass-box">
         <img class="icon" src="../Assets/Group 46.png" alt="img" />
       </div>
       <div class="box">
         <img class="sofa" id="wave" src="../Assets/SofaGuy.png" alt="img" />
       </div>
-    </section>
+    </section> -->
 
     <!-- Typewritter
     <div class="container">
